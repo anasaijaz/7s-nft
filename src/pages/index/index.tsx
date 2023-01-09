@@ -330,7 +330,7 @@ export const NFT = () => {
                     style={{
                         objectFit: 'cover'
                     }}
-                    src={'https://cdn-icons-png.flaticon.com/512/3628/3628910.png'}
+                    src={'https://icons.veryicon.com/png/o/business/work-circle/smart-contracts.png'}
                 />
             </Box>
 

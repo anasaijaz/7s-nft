@@ -48,7 +48,7 @@ const Order = ({sold}) => {
                     </Typography>
                 </Grid>
                 <Grid item xs={3}>
-                    <img width={'70%'} src='https://news.artnet.com/app/news-upload/2022/01/TK-Bored-Ape.jpg' />
+                    <img width={'70%'} src='https://icons.veryicon.com/png/o/business/work-circle/smart-contracts.png' />
                 </Grid>
                 <Grid item xs={4}>
                     <Typography variant={'h6'}>
