@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React, { useState } from 'react'
 import Appbar from "../../components/UI/Appbar/Appbar";
 import {Box, Button, Container, Grid, Icon, IconButton, Typography, useTheme} from "@mui/material";

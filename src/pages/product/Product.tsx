@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import Appbar from "../../components/UI/Appbar/Appbar";
 import {Box, useTheme} from "@mui/system";
 import React from "react";

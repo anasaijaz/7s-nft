@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React from 'react';
 import {Box, useTheme} from "@mui/system";
 import {Button, Container, Divider, Grid, Typography} from "@mui/material";

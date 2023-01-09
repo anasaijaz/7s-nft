@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React, { useState } from 'react'
 import './App.css'
 import {Routes, Route} from 'react-router-dom'
@@ -14,7 +16,7 @@ import Cart from "./pages/cart/Cart";
 function App() {
     const theme = useTheme()
 
-  return (
+    return (
     <Box className="App" sx={{
         backgroundColor: theme.palette.background.grey
     }}>

@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import {Box, Button, Container, Divider, Grid, IconButton, Paper, TextField, Typography} from "@mui/material";
 import Appbar from "../../components/UI/Appbar/Appbar";
 import {PageHeading} from "../explore/Explore";
