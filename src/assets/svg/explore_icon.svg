@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="271.904" height="280.823" viewBox="0 0 271.904 280.823">
+    <defs>
+        <filter id="Rectangle_110" x="0" y="0" width="271.904" height="280.823" filterUnits="userSpaceOnUse">
+            <feOffset dy="3" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="12.5" result="blur"/>
+            <feFlood flood-opacity="0.161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_110)">
+        <rect id="Rectangle_110-2" data-name="Rectangle 110" width="196.904" height="205.823" transform="translate(37.5 34.5)" fill="#090d4c"/>
+    </g>
+    <text id="XID" transform="translate(133.314 177.693)" fill="#ea2224" font-size="24" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700"><tspan x="-19.92" y="0">XID</tspan></text>
+    <path id="Icon_map-art-gallery" data-name="Icon map-art-gallery" d="M27.706,4.32C10.84,4.32.72,17.85.72,24.615S4.093,36.455,10.84,36.455s10.121,1.69,10.121,6.764A11.544,11.544,0,0,0,32.766,55.057c21.927,0,32.045-11.838,32.045-23.676C64.81,11.086,47.941,4.32,27.706,4.32Zm-4.217,6.766a4.228,4.228,0,1,1-4.217,4.227,4.222,4.222,0,0,1,4.217-4.227Zm13.491,0a4.228,4.228,0,1,1-4.215,4.227,4.222,4.222,0,0,1,4.215-4.227ZM50.474,17.85a4.228,4.228,0,1,1-4.215,4.229A4.222,4.222,0,0,1,50.474,17.85ZM11.683,21.233a4.227,4.227,0,1,1-4.217,4.226,4.219,4.219,0,0,1,4.217-4.226ZM32.765,38.145a5.074,5.074,0,1,1-5.059,5.075,5.065,5.065,0,0,1,5.059-5.075Z" transform="translate(102.128 82.355)" fill="#fff"/>
+</svg>

@@ -2,18 +2,20 @@ import { createSlice } from '@reduxjs/toolkit';
 
 export const uiSlice = createSlice({
     name: 'ui',
-    initialState: [],
+    initialState: {
+        cxnShown: false
+    },
     reducers: {
-        notify: (state, action) => {
-            const todo = {
-                text: action.payload,
-            };
-
+        showWallet: (state, action) => {
+            state.cxnShown = true
+        },
+        hideWallet: (state, action) => {
+            state.cxnShown = false
         }
     }})
 
 // this is for dispatch
-export const { notify } = uiSlice.actions;
+export const { showWallet, hideWallet } = uiSlice.actions;
 
 // this is for configureStore
 export default uiSlice.reducer;
