@@ -19,7 +19,9 @@
     "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.4",
-    "react-vertical-timeline-component": "^3.6.0"
+    "react-snap-carousel": "^0.1.0",
+    "react-vertical-timeline-component": "^3.6.0",
+    "swiper": "^8.4.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",

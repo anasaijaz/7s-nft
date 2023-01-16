@@ -13,7 +13,8 @@ import PartnerB from '../../assets/svg/partners/B.svg'
 import PartnerC from '../../assets/svg/partners/C.svg'
 import CEO from '../../assets/svg/ceo.svg'
 import {useNavigate} from "react-router-dom";
-
+import Biometric from '../../assets/png/biometric.jpg'
+import Carousel from "../../components/UI/Carousel/Carousel";
 
 function Index() {
     const theme = useTheme()
@@ -68,10 +69,8 @@ const Hero = () => {
                     <Typography paragraph color='primary' fontWeight='700' variant='h3'>
                         Become a Fractional Owner of Our Intellectual Property
                     </Typography>
-                    <Typography color='textSecondary' paragraph variant='subtitle1' maxWidth='50%'>
-                        Own a portion of lorem ipsum dolor ito
-                        Own a portion of lorem ipsum dolor ito
-                        Own a portion of lorem ipsum dolor ito
+                    <Typography color='textSecondary' paragraph variant='subtitle1' maxWidth='60%'>
+                        XiD Technologies pioneered biometrics in 2003, now XiD is building the world’s first decentralized, secure identity verification using facial recognition on the blockchain.
                     </Typography>
                     <Button variant='contained' size='large'>
                         Buy NFT
@@ -80,7 +79,7 @@ const Hero = () => {
             </Grid>
             <Grid item xs={5}>
                 <Box>
-                    <img width='100%' src='https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?w=740&t=st=1671029841~exp=1671030441~hmac=c0bb3ed81ce9e145cb1fc80694c8fc9e4e8a8dd5490ddbc84d399841167d5d92'/>
+                    <img style={{float: 'right', borderRadius: '10px'}}   width='80%' src={Biometric}/>
                 </Box>
             </Grid>
         </Grid>
@@ -102,9 +101,9 @@ const List = ({ListItem, xs=4}: {ListItem: any, xs?: number}) => {
 }
 
 
-const Team = () => {
+export const Team = () => {
     return (
-        <Box>
+        <Box pb={6}>
 
             <Grid container>
                 <Grid item xs={2}>
@@ -146,18 +145,35 @@ const Utilities = () => {
                 Behaviour and functional of NFTs
             </Typography>
 
-            {[1,2,3,4].map(item => (
+            {[{
+                id: 1,
+                title: 'F-NFT owner has fractional ownership of XiD’s Intellectual Property and will be able to monetize the 2 US Granted Patents and Singapore Patents'
+            },
+                {
+                    id: 2,
+                    title: ' The F-NFT owners will have fractional ownership in any future international patents derived from all granted patents'
+                },
+                {
+                    id: 3,
+                    title: 'F-NFT owners will receive passive income from product royalties for up to 5 years'
+                },
+                {
+                    id: 4,
+                    title: 'F-NFT owners will receive passive income from every licence sold for up to 5 years'
+                },
+                {
+                    id: 5,
+                    title: 'F-NFT owners will receive portion of net profits from selling the XiD product and service'
+                }].map(item => (
                 <Grid container alignItems='center' pb={2} >
-                    <Grid item xs={1} order={item % 2 ? 0 : 2}>
+                    <Grid item xs={1} order={item.id % 2 ? 0 : 2}>
                         <Typography variant='h2' fontWeight={800} color={item % 2 ? 'secondary' : 'primary'} textAlign='center'>
-                            {item}
+                            {item.id}
                         </Typography>
                     </Grid>
                     <Grid item xs={11} order={1}>
                         <Typography variant='h6' >
-                            F-NFT owner has fractional ownership of XiD’s Intellectual
-                            Property and will be able to monetize the 2 US Granted
-                            Patents and Singapore Patents
+                            {item.title}
                         </Typography>
                     </Grid>
                 </Grid>
@@ -285,25 +301,7 @@ const SponsorsList = () => {
                 Our Partners
             </Typography>
 
-            <Typography paragraph variant='body1'>
-                Pin Partners
-            </Typography>
-
-            <img src={PartnerA} width='100%'/>
-
-            <Typography paragraph variant='body1'>
-                BiB Pilot existing partners
-            </Typography>
-
-            <img src={PartnerB} width='100%'/>
-
-
-            <Typography paragraph variant='body1'>
-                Target Partners
-            </Typography>
-
-            <img src={PartnerC} width='100%'/>
-
+            <Carousel/>
         </Box>
     )
 }

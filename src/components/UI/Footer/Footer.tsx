@@ -12,15 +12,14 @@ const Footer = () => {
                 <Grid item xs={3}>
                     <img src={Logo} height='40px'/>
                     <Typography variant='body1'>
-                        carmelo.pistorio@xidtech.com
+                        marketing@xidtech.com
                     </Typography>
                     <Typography variant='body1'>
                         +65 6282 6500
                     </Typography>
                     <Typography variant='body1'>
-                        Da Jin Factory Building
+                        362 Upper Paya Lebar Rd, #05-08
                         Singapore 534963
-
                     </Typography>
                 </Grid>
                 <Grid item xs={3}>
@@ -71,11 +70,11 @@ const Footer = () => {
 const FooterLinks = ({label, links}: {label: string, links: Array<string>}) => {
     return (
         <Box>
-            <Typography fontWeight={600} color='secondary' variant='body1'>
-                Customer Care
+            <Typography gutterBottom fontWeight={600} color='secondary' variant='body1'>
+                {label}
             </Typography>
 
-            {['Posts', 'Help Center', 'My Wallet', 'Shopping Cart', 'FAQ'].map(link => (
+            {links.map(link => (
                 <Typography variant='body2' color='primary'>
                     {link}
                 </Typography>

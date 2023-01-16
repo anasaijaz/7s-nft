@@ -10,6 +10,7 @@ import {FiFeather, FiLock, FiPlay, FiUpload} from "react-icons/fi";
 import ReferenceIcon from '../../assets/svg/reference.svg'
 import DotPattern from '../../assets/svg/patterns/dot.svg'
 import Solution from '../../assets/svg/solution.svg'
+import {Team} from "../index";
 
 const Value = () => {
     const theme = useTheme()
@@ -21,35 +22,7 @@ const Value = () => {
             <Box style={theme.mixins.toolbar}/>
             <PageHeading title={'References'} subtitle={'Lorem ipsum dolor ito dolor ito dolor ito ito dolor ito dolor ito ito dolor ito dolor ito'}/>
             <Container maxWidth='lg'>
-                <Grid container spacing={3}>
-                    <Grid item xs={3}>
-                        <Reference label='Introduction to
-FaaS™/PIN™'/>
-                    </Grid>
-                    <Grid item xs={3}>
-                        <Reference label='CNA review of
-XiD'/>
 
-                    </Grid>
-                    <Grid item xs={3}>
-                        <Reference label='Channel 8 review
-of XiD'/>
-
-                    </Grid>
-                    <Grid item xs={3}>
-                        <Reference label='Unused FiD
-promotional video'/>
-
-                    </Grid>
-                    <Grid item xs={3}>
-                        <Reference label='My interview at the
-time of the
-unsuccessful FiD ICO'/>
-
-                    </Grid>
-                </Grid>
-
-                <br/>
                 <br/>
                 <br/>
 
@@ -58,6 +31,7 @@ unsuccessful FiD ICO'/>
                 <Typography variant='h5' color='primary' fontWeight={800}>
                     About us
                 </Typography>
+
                 <Typography variant='body2' color='textSecondary' >
                     Our vision is to make the face the primary identification for every individual in the world because biometric facial recognition has the following advantages:
                 </Typography>
@@ -68,6 +42,9 @@ unsuccessful FiD ICO'/>
                         <img width={'100%'} src={DotPattern}/>
                     </Grid>
                 </Grid>
+
+                <Team/>
+
 
                 {[{
                     id: 1,

@@ -118,7 +118,7 @@ const Appbar = () => {
                         </ListItem>
                         <ListItem onClick={handleClick('/value')}>
                         <ListItemButton >
-                                Contact
+                                About
                             </ListItemButton>
                         </ListItem>
                     </List>
