@@ -2,19 +2,34 @@
 
 import React, { useState } from 'react'
 import Appbar from "../../components/UI/Appbar/Appbar";
-import {Box, Button, Container, Grid, Icon, IconButton, Typography, useTheme} from "@mui/material";
+import {Box, Button, Container, Grid, Icon, IconButton, Paper, Typography, useTheme} from "@mui/material";
 import {FiShoppingCart} from "react-icons/all";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import Footer from "../../components/UI/Footer/Footer";
 import RoadMapSVG from '../../assets/svg/roadmap.svg'
-import PartnerA from '../../assets/svg/partners/A.svg'
-import PartnerB from '../../assets/svg/partners/B.svg'
-import PartnerC from '../../assets/svg/partners/C.svg'
 import CEO from '../../assets/svg/ceo.svg'
 import {useNavigate} from "react-router-dom";
 import Biometric from '../../assets/png/biometric.jpg'
+import Metamask from '../../assets/svg/wallets/coinbase.svg'
 import Carousel from "../../components/UI/Carousel/Carousel";
+import usecaseA from '../../assets/png/usecases/img.png'
+import usecaseB from '../../assets/png/usecases/img_1.png'
+import usecaseC from '../../assets/png/usecases/img_2.png'
+import usecaseD from '../../assets/png/usecases/img_3.png'
+import usecaseE from '../../assets/png/usecases/img_4.png'
+import usecaseF from '../../assets/png/usecases/img_5.png'
+import usecaseG from '../../assets/png/usecases/img_6.png'
+
+const map = [
+    usecaseA,
+    usecaseB,
+    usecaseC,
+    usecaseD,
+    usecaseE,
+    usecaseF,
+    usecaseF
+]
 
 function Index() {
     const theme = useTheme()
@@ -28,6 +43,127 @@ function Index() {
             <Box style={theme.mixins.toolbar}/>
 
             <Hero/>
+
+            <Divider/>
+
+            <Typography paragraph variant='h5' fontWeight='bold'>
+                What is Blockchain?
+            </Typography>
+
+            <Box>
+                <Grid container spacing={5}>
+                    <Grid item xs={3}>
+                        <Box p={3} sx={{
+                            borderRadius: '20px'
+                        }}>
+                      <Typography variant='body2'>
+                          From the early days of the World Wide Web to the present, authentication methods
+                          have largely relied on user name and password combinations. As any Internet user
+                          knows, these are both cumbersome and vulnerable to loss or breach, putting users
+                          and institutions at significant risk of loss of privacy and financial losses.
+                      </Typography>
+                        </Box>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Box p={3} sx={{
+                            borderRadius: '20px'
+                        }}>
+                        <Typography variant='body2'>
+                            XiD Technologies seeks to put an end to the risks and hassles of current
+                            authentication methods: By endowing any Internet user with the ability to carry
+                            their assets and credentials anywhere on the Internet and access them easily and securely through just their face.
+                        </Typography>
+                        </Box>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Box p={3} sx={{
+                            borderRadius: '20px'
+                        }}>
+                        <Typography variant='body2'>
+                            Biometric technologies, in particular face recognition, have allowed people
+                            around the world to replace usernames and passwords in a safe and secure manner.
+                            But to date, the Internet has not provided a secure way to store and share such sensitive data.
+                        </Typography>
+                        </Box>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Box p={3} sx={{
+                            borderRadius: '20px',
+                        }}>
+                        <Typography variant='body2'>
+                            As a result, biometric identities, no matter how sophisticated, have only
+                            been stored locally, on digital devices or local servers. However, blockchain
+                            ledgers have created an unprecedented level of security and integrity to store
+                            information on the Internet without any risk of hacking or corruption.
+                        </Typography>
+                        </Box>
+                    </Grid>
+                </Grid>
+            </Box>
+
+            <Divider/>
+
+            <Grid container spacing={3}>
+            {
+                map.map(value => <Grid xs={3} item>
+                    <Box borderRadius='10px' bgcolor='white' minHeight='150px'>
+                    <img src={value} width='100%'/>
+                </Box>
+                </Grid>)
+            }
+            </Grid>
+
+
+            <Divider/>
+
+            <Typography paragraph variant='h5' fontWeight='bold'>
+                What is NFT?
+            </Typography>
+
+            <Box>
+                <Grid container spacing={5}>
+                    <Grid item xs={3}>
+                        <Box p={3} sx={{
+                            borderRadius: '20px'
+                        }}>
+                            <Typography variant='body2'>
+                                Non-Fungible Tokens (NFTs) are a “one-of-a-kind” unit of data stored on a blockchain, and because of its unique properties, NFT can neither be replaced nor interchanged and it serves as the most secure proof of ownership.
+                            </Typography>
+                        </Box>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Box p={3} sx={{
+                            borderRadius: '20px'
+                        }}>
+                            <Typography variant='body2'>
+                                Own a Fraction of Our Intellectual Property
+                                XiD Technologies acknowledges the utility of F-NFTs and will therefore tokenize its Intellectual Property on the Ethereum (ETH) chain representing 20% ownership in two Singapore patents and two US patents, as well as any future updates or extension of the mentioned patents.
+                            </Typography>
+                        </Box>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Box p={3} sx={{
+                            borderRadius: '20px'
+                        }}>
+                            <Typography variant='body2'>
+                                The F-NFT sales of the XiD fractional IP consists of multiple rounds which add up to a total of 5000 F-NFTs. No additional F-NFTs within the aforementioned patent domain will be created, resulting in a maximum supply of 5000 F-NFTs.
+                            </Typography>
+                        </Box>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Box p={3} sx={{
+                            borderRadius: '20px',
+                        }}>
+                            <Typography variant='body2'>
+                                The F-NFT sale is executed through multiple rounds:
+                                First round: 1000 F-NFT available on the XiD NFT platform at a cost of $1,500
+                                Second Round: 2000 F-NFT available for sale at a cost of $3,500
+                                Third Round: 2000 F-NFT available for sale at a cost of $5,500
+                            </Typography>
+                        </Box>
+                    </Grid>
+                </Grid>
+            </Box>
 
             <Divider/>
 
@@ -47,7 +183,16 @@ function Index() {
 
             <Divider/>
 
-            <Team/>
+            <Paper variant='outlined'>
+            <Box p={4} className='history'>
+                <Typography gutterBottom variant='h5' fontWeight='bold'>
+                    Our History
+                </Typography>
+                <Typography variant='body1'>
+                    With over 400K registered users and 1M transactions per day, XiD Technologies is Singapore’s leading pioneer in biometric facial recognition. This multiple award-winning company was founded by Mr. Carmelo Pistorio in 2003 with the ambitious vision of “Making Your Face The Master Key” for everything. In the same year, XiD launched its first biometric facial recognition system in partnership with A*STAR, the Singapore government’s agency for science, technology and research. XiD is working towards creating a future where you only need your face to lock/unlock everything; a world where security, simplicity and privacy are guaranteed by XiD’s facial biometrics. XiD’s facial biometrics systems have been successfully deployed in extremely diverse sectors, ranging from construction, dormitory, banking, commercial, retail as well as education.
+                </Typography>
+            </Box>
+            </Paper>
 
             <Divider/>
 
@@ -79,7 +224,10 @@ const Hero = () => {
             </Grid>
             <Grid item xs={5}>
                 <Box>
-                    <img style={{float: 'right', borderRadius: '10px'}}   width='80%' src={Biometric}/>
+                    <img style={{
+                        float: 'right',
+                        borderRadius: '10px'
+                    }}   width='80%' src={Biometric}/>
                 </Box>
             </Grid>
         </Grid>
@@ -165,13 +313,13 @@ const Utilities = () => {
                     id: 5,
                     title: 'F-NFT owners will receive portion of net profits from selling the XiD product and service'
                 }].map(item => (
-                <Grid container alignItems='center' pb={2} >
-                    <Grid item xs={1} order={item.id % 2 ? 0 : 2}>
-                        <Typography variant='h2' fontWeight={800} color={item % 2 ? 'secondary' : 'primary'} textAlign='center'>
+                <Grid container alignItems='center' pb={2} width='550px' marginLeft={!(item.id % 2) ? 'auto' : 'none'}>
+                    <Grid item xs={2} order={item.id % 2 ? 0 : 2}>
+                        <Typography variant='h2' fontWeight={800} color={item.id % 2 ? 'secondary' : 'primary'} textAlign='center'>
                             {item.id}
                         </Typography>
                     </Grid>
-                    <Grid item xs={11} order={1}>
+                    <Grid item xs={10} order={1}>
                         <Typography variant='h6' >
                             {item.title}
                         </Typography>
