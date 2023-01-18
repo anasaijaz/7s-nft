@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Appbar from "../../components/UI/Appbar/Appbar";
 import {Box, Button, Container, Grid, Icon, IconButton, Paper, Typography, useTheme} from "@mui/material";
-import {FiShoppingCart} from "react-icons/all";
+import {FiShoppingCart, FiUsers} from "react-icons/all";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import Footer from "../../components/UI/Footer/Footer";
@@ -22,13 +22,30 @@ import usecaseF from '../../assets/png/usecases/img_5.png'
 import usecaseG from '../../assets/png/usecases/img_6.png'
 
 const map = [
-    usecaseA,
-    usecaseB,
-    usecaseC,
-    usecaseD,
-    usecaseE,
-    usecaseF,
-    usecaseF
+    {
+        url: usecaseA,
+        text: 'Make sure that people are who they are'
+    },
+    {
+        url: usecaseB,
+        text: 'Deal with impostors and prevent identity fraud.'
+    },
+    {
+        url: usecaseC,
+        text: 'Allow for people to identify themselves, even in countries where formal identification is not possible at the time'
+    },
+    {
+        url: usecaseD,
+        text: 'Give people ownership of their ID'
+    },
+    {
+        url: usecaseE,
+        text: 'Help blockchain services struggling with identity issues'
+    },
+    {
+        url: usecaseF,
+        text: 'Remove middleman for the purpose of identification'
+    }
 ]
 
 function Index() {
@@ -106,8 +123,11 @@ function Index() {
             <Grid container spacing={3}>
             {
                 map.map(value => <Grid xs={3} item>
-                    <Box borderRadius='10px' bgcolor='white' minHeight='150px'>
-                    <img src={value} width='100%'/>
+                    <Box p={2} borderRadius='10px' bgcolor='white' minHeight='280px'>
+                        <img src={value.url} width='100%' />
+                        <Typography variant='body1' textAlign='center'>
+                            {value.text}
+                    </Typography>
                 </Box>
                 </Grid>)
             }
@@ -184,7 +204,13 @@ function Index() {
             <Divider/>
 
             <Paper variant='outlined'>
-            <Box p={4} className='history'>
+            <Box p={4} sx={{
+                backgroundImage: `url(${Metamask})`,
+                backgroundPosition: '100% -10px',
+                backgroundSize: '100px',
+                backgroundRepeat: 'no-repeat',
+
+            }} className='history'>
                 <Typography gutterBottom variant='h5' fontWeight='bold'>
                     Our History
                 </Typography>
