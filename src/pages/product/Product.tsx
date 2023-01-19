@@ -57,7 +57,7 @@ const Product = () => {
 
 
                         <Typography gutterBottom  color='fontSecondary' variant='body2'>
-                            XiD Technologies is introducing the ability for an individual to purchase a fractional ownership of XiD’s 4 existing patents and technologies in the form of a Fractional Non-Fungible Token, creating a brand...
+                            XiD Technologies is introducing the ability for an individual to purchase a fractional ownership of XiD’s 6 existing patents and technologies in the form of a Fractional Non-Fungible Token, creating a brand...
                         </Typography>
 
                         <Divider sx={{

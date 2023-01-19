@@ -12,7 +12,7 @@ const Footer = () => {
                 <Grid item xs={3}>
                     <img src={Logo} height='40px'/>
                     <Typography variant='body1'>
-                        marketing@xidtech.com
+                        nft@xidtech.com
                     </Typography>
                     <Typography variant='body1'>
                         +65 6282 6500
@@ -26,7 +26,7 @@ const Footer = () => {
                     <FooterLinks label={'Navigation'} links={['Home', 'Explore', 'Activity', 'About', 'Community']} />
                 </Grid>
                 <Grid item xs={3}>
-                    <FooterLinks label={'Explore'} links={['Collections', 'Artists', 'Popular', 'New']} />
+                    <FooterLinks label={'Explore'} links={['Collections', 'Popular', 'New']} />
                 </Grid>
                 <Grid item xs={3}>
                     <FooterLinks label={'Customer Care'} links={['Posts', 'Help Center', 'My Wallet', 'Shopping Cart', 'FAQ']} />

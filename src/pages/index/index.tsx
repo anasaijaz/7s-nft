@@ -157,7 +157,7 @@ function Index() {
                         }}>
                             <Typography variant='body2'>
                                 Own a Fraction of Our Intellectual Property
-                                XiD Technologies acknowledges the utility of F-NFTs and will therefore tokenize its Intellectual Property on the Ethereum (ETH) chain representing 20% ownership in two Singapore patents and two US patents, as well as any future updates or extension of the mentioned patents.
+                                XiD Technologies acknowledges the utility of F-NFTs and will therefore tokenize its Intellectual Property on the Ethereum (ETH) chain representing 50% ownership in two Singapore patents and two US patents, as well as any future updates or extension of the mentioned patents.
                             </Typography>
                         </Box>
                     </Grid>
