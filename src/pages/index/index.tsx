@@ -118,7 +118,9 @@ function Index() {
                 </Grid>
             </Box>
 
+
             <Divider/>
+
 
             <Grid container spacing={3}>
             {
@@ -142,7 +144,7 @@ function Index() {
 
             <Box>
                 <Grid container spacing={5}>
-                    <Grid item xs={3}>
+                    <Grid item xs>
                         <Box p={3} sx={{
                             borderRadius: '20px'
                         }}>
@@ -151,41 +153,49 @@ function Index() {
                             </Typography>
                         </Box>
                     </Grid>
-                    <Grid item xs={3}>
-                        <Box p={3} sx={{
-                            borderRadius: '20px'
-                        }}>
-                            <Typography variant='body2'>
-                                Own a Fraction of Our Intellectual Property
-                                XiD Technologies acknowledges the utility of F-NFTs and will therefore tokenize its Intellectual Property on the Ethereum (ETH) chain representing 50% ownership in two Singapore patents and two US patents, as well as any future updates or extension of the mentioned patents.
-                            </Typography>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={3}>
-                        <Box p={3} sx={{
-                            borderRadius: '20px'
-                        }}>
-                            <Typography variant='body2'>
-                                The F-NFT sales of the XiD fractional IP consists of multiple rounds which add up to a total of 5000 F-NFTs. No additional F-NFTs within the aforementioned patent domain will be created, resulting in a maximum supply of 5000 F-NFTs.
-                            </Typography>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={3}>
-                        <Box p={3} sx={{
-                            borderRadius: '20px',
-                        }}>
-                            <Typography variant='body2'>
-                                The F-NFT sale is executed through multiple rounds:
-                                First round: 1000 F-NFT available on the XiD NFT platform at a cost of $1,500
-                                Second Round: 2000 F-NFT available for sale at a cost of $3,500
-                                Third Round: 2000 F-NFT available for sale at a cost of $5,500
-                            </Typography>
-                        </Box>
-                    </Grid>
                 </Grid>
             </Box>
 
             <Divider/>
+
+            <Typography paragraph variant='h5' fontWeight='bold'>
+                Pricing
+            </Typography>
+
+            <Typography variant='h6'>
+                The F-NFT sale is executed through multiple rounds:
+            </Typography>
+
+            <Typography variant='h6'>
+                <span className='round'>First round:</span> 1000 F-NFT available on the XiD NFT platform at a cost of <span className='fund'>$1,500</span>
+            </Typography>
+
+            <Typography variant='h6'>
+                <span className='round'>Second Round:</span> 2000 F-NFT available for sale at a cost of <span className='fund'>$3,500</span>
+            </Typography>
+
+            <Typography variant='h6'>
+                <span className='round'>Third Round:</span> 2000 F-NFT available for sale at a cost of <span className='fund'>$5,500</span>
+            </Typography>
+
+
+            <Divider/>
+
+            <Typography paragraph variant='h5' fontWeight='bold'>
+                Our offer
+            </Typography>
+
+
+            <Typography variant='h6' paragraph>
+                Own a Fraction of Our Intellectual Property XiD Technologies acknowledges the utility of F-NFTs and will therefore tokenize its Intellectual Property on the Ethereum (ETH) chain representing 50% ownership in two Singapore patents and two US patents, as well as any future updates or extension of the mentioned patents.
+            </Typography>
+
+
+            <Typography variant='h6'>
+                The F-NFT sales of the XiD fractional IP consists of multiple rounds which add up to a total of 5000 F-NFTs. No additional F-NFTs within the aforementioned patent domain will be created, resulting in a maximum supply of 5000 F-NFTs.            </Typography>
+
+            <Divider/>
+
 
             <NFTList/>
 
