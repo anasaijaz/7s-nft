@@ -12,6 +12,7 @@ import WalletConnector from "./components/UI/WalletConnector/WalletConnector";
 import Value from "./pages/value/Value";
 import Footer from "./components/UI/Footer/Footer";
 import Cart from "./pages/cart/Cart";
+import Loading from "./components/UI/Loading/Loading";
 
 function App() {
     const theme = useTheme()
@@ -20,6 +21,7 @@ function App() {
     <Box className="App" sx={{
         backgroundColor: theme.palette.background.grey
     }}>
+        <Loading/>
         <WalletConnector/>
         <CssBaseline/>
         <Routes>

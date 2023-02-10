@@ -3,7 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 export const uiSlice = createSlice({
     name: 'ui',
     initialState: {
-        cxnShown: false
+        cxnShown: false,
+        loading: false
     },
     reducers: {
         showWallet: (state, action) => {
@@ -11,11 +12,17 @@ export const uiSlice = createSlice({
         },
         hideWallet: (state, action) => {
             state.cxnShown = false
+        },
+        startLoading: (state) => {
+            state.loading = true
+        },
+        stopLoading: (state) => {
+            state.loading = false
         }
     }})
 
 // this is for dispatch
-export const { showWallet, hideWallet } = uiSlice.actions;
+export const { showWallet, hideWallet, startLoading, stopLoading } = uiSlice.actions;
 
 // this is for configureStore
 export default uiSlice.reducer;

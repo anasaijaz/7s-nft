@@ -20,6 +20,7 @@ import usecaseD from '../../assets/png/usecases/img_3.png'
 import usecaseE from '../../assets/png/usecases/img_4.png'
 import usecaseF from '../../assets/png/usecases/img_5.png'
 import usecaseG from '../../assets/png/usecases/img_6.png'
+import {useLoading} from "../../hooks/useLoading";
 
 const map = [
     {
@@ -50,6 +51,7 @@ const map = [
 
 function Index() {
     const theme = useTheme()
+    const [isLoading, startLoading, stopLoading] = useLoading()
 
     return (
         <>
@@ -58,6 +60,7 @@ function Index() {
             <Appbar/>
 
             <Box style={theme.mixins.toolbar}/>
+
 
             <Hero/>
 
