@@ -15,18 +15,9 @@ import {
   useTheme,
 } from "@mui/material";
 import { FiShoppingCart, FiUsers } from "react-icons/all";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import {
-  useContractRead,
-  useSigner,
-  useAccount,
-  useProvider,
-  useContract,
-} from "wagmi";
+import { useContractRead, useSigner, useAccount, useProvider, useContract } from "wagmi";
 import { USDC, XIDNFT } from "../../contracts/config";
 import Footer from "../../components/UI/Footer/Footer";
 import RoadMapSVG from "../../assets/svg/roadmap.svg";
@@ -78,7 +69,7 @@ function Index() {
   const theme = useTheme();
 
   const { data: currentRound } = useContractRead({
-    address: XIDNFT.address[80001],
+    address: XIDNFT.address[137],
     abi: XIDNFT.abi,
     functionName: "currentRound",
   });
@@ -99,12 +90,15 @@ function Index() {
         </Typography>
 
         <Box>
-          <Grid container sx={{
-            spacing: {
-              xs: 2,
-              md: 5
-            }
-          }}>
+          <Grid
+            container
+            sx={{
+              spacing: {
+                xs: 2,
+                md: 5,
+              },
+            }}
+          >
             <Grid item xs={12} md={3}>
               <Box
                 p={3}
@@ -113,12 +107,10 @@ function Index() {
                 }}
               >
                 <Typography variant="body2">
-                  From the early days of the World Wide Web to the present,
-                  authentication methods have largely relied on user name and
-                  password combinations. As any Internet user knows, these are
-                  both cumbersome and vulnerable to loss or breach, putting
-                  users and institutions at significant risk of loss of privacy
-                  and financial losses.
+                  From the early days of the World Wide Web to the present, authentication methods
+                  have largely relied on user name and password combinations. As any Internet user
+                  knows, these are both cumbersome and vulnerable to loss or breach, putting users
+                  and institutions at significant risk of loss of privacy and financial losses.
                 </Typography>
               </Box>
             </Grid>
@@ -130,11 +122,10 @@ function Index() {
                 }}
               >
                 <Typography variant="body2">
-                  XiD Technologies seeks to put an end to the risks and hassles
-                  of current authentication methods: By endowing any Internet
-                  user with the ability to carry their assets and credentials
-                  anywhere on the Internet and access them easily and securely
-                  through just their face.
+                  XiD Technologies seeks to put an end to the risks and hassles of current
+                  authentication methods: By endowing any Internet user with the ability to carry
+                  their assets and credentials anywhere on the Internet and access them easily and
+                  securely through just their face.
                 </Typography>
               </Box>
             </Grid>
@@ -146,11 +137,10 @@ function Index() {
                 }}
               >
                 <Typography variant="body2">
-                  Biometric technologies, in particular face recognition, have
-                  allowed people around the world to replace usernames and
-                  passwords in a safe and secure manner. But to date, the
-                  Internet has not provided a secure way to store and share such
-                  sensitive data.
+                  Biometric technologies, in particular face recognition, have allowed people around
+                  the world to replace usernames and passwords in a safe and secure manner. But to
+                  date, the Internet has not provided a secure way to store and share such sensitive
+                  data.
                 </Typography>
               </Box>
             </Grid>
@@ -162,12 +152,10 @@ function Index() {
                 }}
               >
                 <Typography variant="body2">
-                  As a result, biometric identities, no matter how
-                  sophisticated, have only been stored locally, on digital
-                  devices or local servers. However, blockchain ledgers have
-                  created an unprecedented level of security and integrity to
-                  store information on the Internet without any risk of hacking
-                  or corruption.
+                  As a result, biometric identities, no matter how sophisticated, have only been
+                  stored locally, on digital devices or local servers. However, blockchain ledgers
+                  have created an unprecedented level of security and integrity to store information
+                  on the Internet without any risk of hacking or corruption.
                 </Typography>
               </Box>
             </Grid>
@@ -205,10 +193,9 @@ function Index() {
                 }}
               >
                 <Typography variant="body2">
-                  Non-Fungible Tokens (NFTs) are a “one-of-a-kind” unit of data
-                  stored on a blockchain, and because of its unique properties,
-                  NFT can neither be replaced nor interchanged and it serves as
-                  the most secure proof of ownership.
+                  Non-Fungible Tokens (NFTs) are a “one-of-a-kind” unit of data stored on a
+                  blockchain, and because of its unique properties, NFT can neither be replaced nor
+                  interchanged and it serves as the most secure proof of ownership.
                 </Typography>
               </Box>
             </Grid>
@@ -221,23 +208,21 @@ function Index() {
           Pricing
         </Typography>
 
+        <Typography variant="h6">The F-NFT sale is executed through multiple rounds:</Typography>
+
         <Typography variant="h6">
-          The F-NFT sale is executed through multiple rounds:
+          <span className="round">First round:</span> 1000 F-NFT available on the XiD NFT platform
+          at a cost of <span className="fund">$1,500</span>
         </Typography>
 
         <Typography variant="h6">
-          <span className="round">First round:</span> 1000 F-NFT available on
-          the XiD NFT platform at a cost of <span className="fund">$1,500</span>
+          <span className="round">Second Round:</span> 2000 F-NFT available for sale at a cost of{" "}
+          <span className="fund">$3,500</span>
         </Typography>
 
         <Typography variant="h6">
-          <span className="round">Second Round:</span> 2000 F-NFT available for
-          sale at a cost of <span className="fund">$3,500</span>
-        </Typography>
-
-        <Typography variant="h6">
-          <span className="round">Third Round:</span> 2000 F-NFT available for
-          sale at a cost of <span className="fund">$5,500</span>
+          <span className="round">Third Round:</span> 2000 F-NFT available for sale at a cost of{" "}
+          <span className="fund">$5,500</span>
         </Typography>
 
         <Divider />
@@ -247,18 +232,16 @@ function Index() {
         </Typography>
 
         <Typography variant="h6" paragraph>
-          Own a Fraction of Our Intellectual Property XiD Technologies
-          acknowledges the utility of F-NFTs and will therefore tokenize its
-          Intellectual Property on the Ethereum (ETH) chain representing 50%
-          ownership in two Singapore patents and two US patents, as well as any
+          Own a Fraction of Our Intellectual Property XiD Technologies acknowledges the utility of
+          F-NFTs and will therefore tokenize its Intellectual Property on the Ethereum (ETH) chain
+          representing 50% ownership in two Singapore patents and two US patents, as well as any
           future updates or extension of the mentioned patents.
         </Typography>
 
         <Typography variant="h6">
-          The F-NFT sales of the XiD fractional IP consists of multiple rounds
-          which add up to a total of 5000 F-NFTs. No additional F-NFTs within
-          the aforementioned patent domain will be created, resulting in a
-          maximum supply of 5000 F-NFTs.{" "}
+          The F-NFT sales of the XiD fractional IP consists of multiple rounds which add up to a
+          total of 5000 F-NFTs. No additional F-NFTs within the aforementioned patent domain will be
+          created, resulting in a maximum supply of 5000 F-NFTs.{" "}
         </Typography>
 
         <Divider />
@@ -294,20 +277,17 @@ function Index() {
               Our History
             </Typography>
             <Typography variant="body1">
-              With over 400K registered users and 1M transactions per day, XiD
-              Technologies is Singapore’s leading pioneer in biometric facial
-              recognition. This multiple award-winning company was founded by
-              Mr. Carmelo Pistorio in 2003 with the ambitious vision of “Making
-              Your Face The Master Key” for everything. In the same year, XiD
-              launched its first biometric facial recognition system in
-              partnership with A*STAR, the Singapore government’s agency for
-              science, technology and research. XiD is working towards creating
-              a future where you only need your face to lock/unlock everything;
-              a world where security, simplicity and privacy are guaranteed by
-              XiD’s facial biometrics. XiD’s facial biometrics systems have been
-              successfully deployed in extremely diverse sectors, ranging from
-              construction, dormitory, banking, commercial, retail as well as
-              education.
+              With over 400K registered users and 1M transactions per day, XiD Technologies is
+              Singapore’s leading pioneer in biometric facial recognition. This multiple
+              award-winning company was founded by Mr. Carmelo Pistorio in 2003 with the ambitious
+              vision of “Making Your Face The Master Key” for everything. In the same year, XiD
+              launched its first biometric facial recognition system in partnership with A*STAR, the
+              Singapore government’s agency for science, technology and research. XiD is working
+              towards creating a future where you only need your face to lock/unlock everything; a
+              world where security, simplicity and privacy are guaranteed by XiD’s facial
+              biometrics. XiD’s facial biometrics systems have been successfully deployed in
+              extremely diverse sectors, ranging from construction, dormitory, banking, commercial,
+              retail as well as education.
             </Typography>
           </Box>
         </Paper>
@@ -336,32 +316,37 @@ const Hero = () => {
             variant="subtitle1"
             sx={{
               maxWidth: {
-                md: '60%',
-                xs: '100%'
-              }
+                md: "60%",
+                xs: "100%",
+              },
             }}
           >
-            XiD Technologies pioneered biometrics in 2003, now XiD is building
-            the world’s first decentralized, secure identity verification using
-            facial recognition on the blockchain.
+            XiD Technologies pioneered biometrics in 2003, now XiD is building the world’s first
+            decentralized, secure identity verification using facial recognition on the blockchain.
           </Typography>
-          <Button variant="contained" size="large" sx={{
-            width: {
-              md: 'auto',
-              xs: '100%'
-            }
-          }}>
+          <Button
+            variant="contained"
+            size="large"
+            sx={{
+              width: {
+                md: "auto",
+                xs: "100%",
+              },
+            }}
+          >
             Buy NFT
           </Button>
         </Box>
       </Grid>
-      <Grid item xs={12}   md={5}>
-        <Box sx={{
-          mt: {
-            md: 0,
-            xs: 5
-          }
-        }}>
+      <Grid item xs={12} md={5}>
+        <Box
+          sx={{
+            mt: {
+              md: 0,
+              xs: 5,
+            },
+          }}
+        >
           <img
             style={{
               borderRadius: "10px",
@@ -383,7 +368,7 @@ export const Team = () => {
           <img
             style={{
               borderRadius: "10px",
-              width: '100%'
+              width: "100%",
             }}
             height={"200px"}
             src={CEO}
@@ -391,15 +376,15 @@ export const Team = () => {
         </Grid>
         <Grid item xs={12} md={9}>
           <Box>
-            <Typography textAlign={'center'} gutterBottom variant="h5" fontWeight="bold">
+            <Typography textAlign={"center"} gutterBottom variant="h5" fontWeight="bold">
               Meet our team
             </Typography>
 
-            <Typography textAlign={'center'} fontWeight={600} color="primary" variant={"body1"}>
+            <Typography textAlign={"center"} fontWeight={600} color="primary" variant={"body1"}>
               First name/Last name
             </Typography>
             <Typography
-                textAlign={'center'}
+              textAlign={"center"}
               fontWeight={600}
               color="secondary"
               variant={"subtitle1"}
@@ -457,18 +442,23 @@ const Utilities = () => {
           pb={2}
           sx={{
             width: {
-              md: '550px',
-              xs: '100%'
-            }
+              md: "550px",
+              xs: "100%",
+            },
           }}
           marginLeft={!(item.id % 2) ? "auto" : "none"}
           key={item.id}
         >
-          <Grid item sx={{
-            display: {
-              xs: 'none'
-            }
-          }} md={2} order={item.id % 2 ? 0 : 2}>
+          <Grid
+            item
+            sx={{
+              display: {
+                xs: "none",
+              },
+            }}
+            md={2}
+            order={item.id % 2 ? 0 : 2}
+          >
             <Typography
               variant="h2"
               fontWeight={800}
@@ -479,12 +469,16 @@ const Utilities = () => {
             </Typography>
           </Grid>
           <Grid item xs={10} order={1}>
-            <Typography sx={{
-              variant: {
-                md: 'h6',
-                xs: 'body2'
-              }
-            }}>{item.title}</Typography>
+            <Typography
+              sx={{
+                variant: {
+                  md: "h6",
+                  xs: "body2",
+                },
+              }}
+            >
+              {item.title}
+            </Typography>
           </Grid>
         </Grid>
       ))}
@@ -647,12 +641,12 @@ export const NFT = ({ round }): { round: number } => {
   const { address } = useAccount();
   const provider = useProvider();
   const xidNFT = useContract({
-    address: XIDNFT.address[80001],
+    address: XIDNFT.address[137],
     abi: XIDNFT.abi,
     signerOrProvider: signer ?? provider,
   });
   const usdcToken = useContract({
-    address: USDC.address[80001],
+    address: USDC.address[137],
     abi: USDC.abi,
     signerOrProvider: signer ?? provider,
   });
@@ -660,14 +654,7 @@ export const NFT = ({ round }): { round: number } => {
     startLoading();
     try {
       const balance = await usdcToken.balanceOf(address);
-      const price =
-        round === 1
-          ? 1500000
-          : round === 2
-          ? 1750000
-          : round === 3
-          ? 2750000
-          : 0;
+      const price = round === 1 ? 1500000 : round === 2 ? 1750000 : round === 3 ? 2750000 : 0;
       if (BigNumber.from(balance).lt(price)) {
         return;
       }
@@ -731,13 +718,7 @@ export const NFT = ({ round }): { round: number } => {
               Price(USDC)
             </Typography>
             <Typography variant="body2" align="right">
-              {round === 1
-                ? "1.5"
-                : round === 2
-                ? "1.75"
-                : round === 3
-                ? "2.25"
-                : "NA"}
+              {round === 1 ? "1.5" : round === 2 ? "1.75" : round === 3 ? "2.25" : "NA"}
             </Typography>
           </Box>
         </Box>
