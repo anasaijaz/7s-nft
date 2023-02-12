@@ -99,8 +99,13 @@ function Index() {
         </Typography>
 
         <Box>
-          <Grid container spacing={5}>
-            <Grid item xs={3}>
+          <Grid container sx={{
+            spacing: {
+              xs: 2,
+              md: 5
+            }
+          }}>
+            <Grid item xs={12} md={3}>
               <Box
                 p={3}
                 sx={{
@@ -117,7 +122,7 @@ function Index() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} md={3}>
               <Box
                 p={3}
                 sx={{
@@ -133,7 +138,7 @@ function Index() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} md={3}>
               <Box
                 p={3}
                 sx={{
@@ -149,7 +154,7 @@ function Index() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} md={3}>
               <Box
                 p={3}
                 sx={{
@@ -173,7 +178,7 @@ function Index() {
 
         <Grid container spacing={3}>
           {map.map((value, index) => (
-            <Grid xs={3} item key={index}>
+            <Grid xs={12} md={3} item key={index}>
               <Box p={2} borderRadius="10px" bgcolor="white" minHeight="280px">
                 <img src={value.url} width="100%" />
                 <Typography variant="body1" textAlign="center">
@@ -320,7 +325,7 @@ const Divider = () => {
 const Hero = () => {
   return (
     <Grid container mt={10} alignItems="center">
-      <Grid item xs={7}>
+      <Grid item xs={12} md={7}>
         <Box>
           <Typography paragraph color="primary" fontWeight="700" variant="h3">
             Become a Fractional Owner of Our Intellectual Property
@@ -329,25 +334,39 @@ const Hero = () => {
             color="textSecondary"
             paragraph
             variant="subtitle1"
-            maxWidth="60%"
+            sx={{
+              maxWidth: {
+                md: '60%',
+                xs: '100%'
+              }
+            }}
           >
             XiD Technologies pioneered biometrics in 2003, now XiD is building
             the world’s first decentralized, secure identity verification using
             facial recognition on the blockchain.
           </Typography>
-          <Button variant="contained" size="large">
+          <Button variant="contained" size="large" sx={{
+            width: {
+              md: 'auto',
+              xs: '100%'
+            }
+          }}>
             Buy NFT
           </Button>
         </Box>
       </Grid>
-      <Grid item xs={5}>
-        <Box>
+      <Grid item xs={12}   md={5}>
+        <Box sx={{
+          mt: {
+            md: 0,
+            xs: 5
+          }
+        }}>
           <img
             style={{
-              float: "right",
               borderRadius: "10px",
             }}
-            width="80%"
+            width="100%"
             src={Biometric}
           />
         </Box>
@@ -360,25 +379,27 @@ export const Team = () => {
   return (
     <Box pb={6}>
       <Grid container>
-        <Grid item xs={2}>
+        <Grid item xs={12} md={2}>
           <img
             style={{
               borderRadius: "10px",
+              width: '100%'
             }}
             height={"200px"}
             src={CEO}
           />
         </Grid>
-        <Grid item xs={9}>
+        <Grid item xs={12} md={9}>
           <Box>
-            <Typography gutterBottom variant="h5" fontWeight="bold">
+            <Typography textAlign={'center'} gutterBottom variant="h5" fontWeight="bold">
               Meet our team
             </Typography>
 
-            <Typography fontWeight={600} color="primary" variant={"body1"}>
+            <Typography textAlign={'center'} fontWeight={600} color="primary" variant={"body1"}>
               First name/Last name
             </Typography>
             <Typography
+                textAlign={'center'}
               fontWeight={600}
               color="secondary"
               variant={"subtitle1"}
@@ -434,11 +455,20 @@ const Utilities = () => {
           container
           alignItems="center"
           pb={2}
-          width="550px"
+          sx={{
+            width: {
+              md: '550px',
+              xs: '100%'
+            }
+          }}
           marginLeft={!(item.id % 2) ? "auto" : "none"}
           key={item.id}
         >
-          <Grid item xs={2} order={item.id % 2 ? 0 : 2}>
+          <Grid item sx={{
+            display: {
+              xs: 'none'
+            }
+          }} md={2} order={item.id % 2 ? 0 : 2}>
             <Typography
               variant="h2"
               fontWeight={800}
@@ -449,7 +479,12 @@ const Utilities = () => {
             </Typography>
           </Grid>
           <Grid item xs={10} order={1}>
-            <Typography variant="h6">{item.title}</Typography>
+            <Typography sx={{
+              variant: {
+                md: 'h6',
+                xs: 'body2'
+              }
+            }}>{item.title}</Typography>
           </Grid>
         </Grid>
       ))}
@@ -577,7 +612,7 @@ export const NFTList = ({
       )}
       <Grid container spacing={3}>
         {[1].map((item) => (
-          <Grid item xs={3} key={item}>
+          <Grid item xs={12} md={3} key={item}>
             <NFT round={round} />
           </Grid>
         ))}

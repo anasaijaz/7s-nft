@@ -36,7 +36,7 @@ const Activity = () => {
       <PageHeading
         title={"Activity"}
         subtitle={
-          "Lorem ipsum dolor ito dolor ito dolor ito ito dolor ito dolor ito ito dolor ito dolor ito"
+          ""
         }
       />
       <Container maxWidth="lg">

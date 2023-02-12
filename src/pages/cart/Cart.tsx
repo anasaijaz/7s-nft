@@ -18,7 +18,7 @@ const Cart = () => {
       <PageHeading
         title={"References"}
         subtitle={
-          "Lorem ipsum dolor ito dolor ito dolor ito ito dolor ito dolor ito ito dolor ito dolor ito"
+          ""
         }
       />
       <Container maxWidth="lg">

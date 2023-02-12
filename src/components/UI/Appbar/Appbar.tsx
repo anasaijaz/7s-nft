@@ -52,7 +52,7 @@ const Appbar = () => {
         <Toolbar>
           <Container maxWidth="lg" component={Box}>
             <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
-              <Box style={{ display: "block", flexGrow: "0" }} mr={10}>
+              <Box style={{ display: "block"}}>
                 <img src={Logo} height="40px" />
               </Box>
 

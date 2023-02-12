@@ -23,8 +23,7 @@ export const uiSlice = createSlice({
 });
 
 // this is for dispatch
-export const { showWallet, hideWallet, startLoading, stopLoading } =
-  uiSlice.actions;
+export const { showWallet, hideWallet, startLoading, stopLoading } = uiSlice.actions;
 
 // this is for configureStore
 export default uiSlice.reducer;

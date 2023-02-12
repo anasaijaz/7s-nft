@@ -70,7 +70,7 @@ const options = {
       defaultProps: {},
       styleOverrides: {
         root: {
-          borderRadius: "100px",
+          borderRadius: "10px",
           textTransform: "none",
           boxShadow: "none",
           variant: "link",

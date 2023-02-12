@@ -33,15 +33,15 @@ const Value = () => {
       <PageHeading
         title={"References"}
         subtitle={
-          "Lorem ipsum dolor ito dolor ito dolor ito ito dolor ito dolor ito ito dolor ito dolor ito"
+          ""
         }
       />
       <Container maxWidth="lg">
         <br />
         <br />
 
-        <Grid container alignItems="center">
-          <Grid item xs={4}>
+        <Grid mb={5} container alignItems="center">
+          <Grid item xs={12} md={4}>
             <Typography variant="h5" color="primary" fontWeight={800}>
               About us
             </Typography>
@@ -53,7 +53,12 @@ const Value = () => {
             </Typography>
           </Grid>
           <Grid item xs />
-          <Grid item xs={2}>
+          <Grid item sx={{
+            display: {
+              xs: 'none',
+              md: 'block'
+            },
+          }} md={2}>
             <img width={"100%"} src={DotPattern} />
           </Grid>
         </Grid>
@@ -78,7 +83,12 @@ const Value = () => {
           },
         ].map((item) => (
           <Grid container alignItems="center" pb={2}>
-            <Grid item xs={1} order={item.id % 2 ? 0 : 2}>
+            <Grid sx={{
+              display: {
+                md: 'block',
+                xs: 'none'
+              }
+            }} item xs={1} order={item.id % 2 ? 0 : 2}>
               {item.icon}
             </Grid>
             <Grid item xs={11} order={1}>
@@ -133,7 +143,12 @@ const Value = () => {
             mb: 10,
           }}
         >
-          <Box px={15}>
+          <Box sx={{
+            px: {
+              md: 15,
+              xs: 0
+            }
+          }} >
             <Typography
               paragraph
               textAlign="center"
@@ -145,7 +160,7 @@ const Value = () => {
             </Typography>
 
             <Grid pb={3} container spacing={2}>
-              <Grid item xs={6}>
+              <Grid item xs={12} md={6}>
                 <TextField
                   fullWidth
                   label="First Name"
@@ -153,7 +168,7 @@ const Value = () => {
                   variant="filled"
                 />
               </Grid>
-              <Grid item xs={6}>
+              <Grid item xs={12} md={6}>
                 <TextField
                   fullWidth
                   label="Last Name"
