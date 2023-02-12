@@ -1,8 +1,7 @@
 {
-  "name": "7s-nft-shops",
+  "name": "7s-nft-app",
+  "version": "0.0.1",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -11,23 +10,28 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.10.17",
-    "@mui/system": "^5.10.17",
-    "@reduxjs/toolkit": "^1.9.1",
+    "@mui/material": "^5.11.8",
+    "@rainbow-me/rainbowkit": "^0.8.1",
+    "@reduxjs/toolkit": "^1.9.2",
+    "buffer": "^6.0.3",
+    "ethers": "^5.7.2",
+    "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.4.4",
-    "react-snap-carousel": "^0.1.0",
+    "react-router-dom": "^6.8.1",
+    "react-snap-carousel": "^0.2.0",
     "react-vertical-timeline-component": "^3.6.0",
-    "swiper": "^8.4.5"
+    "swiper": "^9.0.3",
+    "util": "^0.12.4",
+    "wagmi": "~0.10.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
-    "@vitejs/plugin-react": "^2.2.0",
-    "typescript": "^4.6.4",
-    "vite": "^3.2.3"
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.3",
+    "@vitejs/plugin-react": "^2.1.0",
+    "typescript": "^4.7.4",
+    "vite": "^3.1.8"
   }
 }
