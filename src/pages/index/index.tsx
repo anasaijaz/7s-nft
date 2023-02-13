@@ -718,7 +718,7 @@ export const NFT = ({ round }): { round: number } => {
               Price(USDC)
             </Typography>
             <Typography variant="body2" align="right">
-              {round === 1 ? "1.5" : round === 2 ? "1.75" : round === 3 ? "2.25" : "NA"}
+              {round === 1 ? "1500" : round === 2 ? "3500" : round === 3 ? "5500" : "NA"}
             </Typography>
           </Box>
         </Box>
